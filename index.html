@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="GET-Zero is a embodiment-aware policy for controlling a range of similar robot designs">
+  <meta name="keywords" content="cross-embodiment, manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GET-Zero</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T68W02KHKC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T68W02KHKC');
+</script>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="margin: 0">GET-Zero</h1>
+          <h1 class="title is-3 publication-title" style="margin-bottom: 4px;">Graph Embodiment Transformer for<br>Zero-shot Embodiment Generalization</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://austinapatel.github.io">Austin Patel</a>&emsp;</span>
+            <span class="author-block">
+              <a href="https://shurans.github.io/">Shuran Song</a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Stanford University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="TODO arXiv PDF"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Abstract Link. -->
+              <span class="link-block">
+                <a href="TODO arXiv abstract"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/real-stanford/get_zero"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=uqoM3lhPN3U"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+
+          <div class="center" style="margin-top: 10px;">
+            <video id="model_teaser" loop autoplay muted width="80%" class="center" style="padding-top: 10px; clip-path: inset(1px 1px);">
+              <source src="static/videos/model_teaser.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered" style="width: 80%; margin: auto; margin-top: 8px;">
+            GET-Zero controls new hand designs without a new policy
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section no_top_pad">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This paper introduces GET-Zero, a model architecture and training procedure for learning an embodiment-aware control policy that can immediately adapt to new hardware changes without retraining. 
+            To do so, we present Graph Embodiment Transformer (GET), a transformer model that leverages the embodiment graph connectivity as a learned structural bias in the attention mechanism. We use behavior cloning to distill demonstration data from embodiment-specific expert policies into an embodiment-aware GET model that conditions on the hardware configuration of the robot to make control decisions. We conduct a case study on a dexterous in-hand object rotation task using different configurations of a four-fingered robot hand with joints removed and with link length extensions. Using the GET model along with a self-modeling loss enables GET-Zero to zero-shot generalize to unseen variation in graph structure and link length, yielding a 20% improvement over baseline methods.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <div class="publication-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/uqoM3lhPN3U?si=a_Nh3pTcaEpXxQe-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section no_top_pad">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <h2 class="title is-3">Graph Embodiment Transformer (GET)</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/architecture.png" style="width: 100%; margin-bottom: 15px; margin-top: 10px;">
+          <p>
+            <b>GET is an embodiment-aware model architecture</b> based on the transformer encoder that conditions on the robot hardware structure to <b>zero-shot control new robot designs</b>. The main idea is to leverage the embodiment graph (left), with joints as nodes and links as edges, as a structural bias in the attention mechanism (right). And by operating on per-joint tokens containing local hardware properties and observations, <b>GET flexibly adapts to robots with varying number of joints and graph structures</b>. GET also performs per-joint forward kinematics prediction as a self-modeling meta-task, which empirically improves cross-embodiment transfer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section no_top_pad">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="margin-top: 20px;">GET-Zero Controls Many Designs</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            With only a <b>single set of network weights</b>, GET-Zero controls many different hand designs even if we <b>remove joints/fingers or add link length extensions</b>. We compare to a baseline that doesn't have the graph encoding nor self-modeling features and find a substantial drop in performance.
+          </p>
+        </div>
+
+        <div class="content has-text-justified">
+          <h4 class="has-text-centered">All joints present (Training)</h4>
+          <div id="wrapper">
+            <video id="home1" autoplay muted loop playsinline> 
+                <source type="video/mp4" src="./static/videos/get_ar_tag/001.mp4" /> 
+            </video>
+            <video id="home2" autoplay muted loop playsinline> 
+                <source type="video/mp4" src="./static/videos/et_ar_tag/001.mp4" /> 
+            </video>
+            <div class="clear"></div> 
+            <div>
+              <p class="subtitle has-text-centered left" style="margin-top: 5px"><span class="good caption_pad">GET-Zero (Ours) - 21 degrees/second</span></p>
+              <p class="subtitle has-text-centered right" style="margin-top: 5px"><span class="bad caption_pad">Baseline - 12 degrees/second</span></p>
+            </div>
+            <div class="clear"></div>
+            
+            <h4 class="has-text-centered" style="margin-top: 20px;">Shorten thumb and remove middle finger (Zero-shot)</h4>
+            <video id="home1" autoplay muted loop playsinline> 
+              <source type="video/mp4" src="./static/videos/get_ar_tag/139.mp4" /> 
+            </video>
+            <video id="home2" autoplay muted loop playsinline> 
+                <source type="video/mp4" src="./static/videos/et_ar_tag/139.mp4" /> 
+            </video>
+            <div class="clear"></div> 
+            <div>
+              <p class="subtitle has-text-centered left" style="margin-top: 5px"><span class="good caption_pad">GET-Zero (Ours) - 22 degrees/second</span></p>
+              <p class="subtitle has-text-centered right" style="margin-top: 5px"><span class="bad caption_pad">Baseline - 9 degrees/second</span></p>
+            </div>
+            <div class="clear"></div>
+
+            <h4 class="has-text-centered" style="margin-top: 20px;">Extend finger lengths and remove joint from index finger (Zero-shot)</h4>
+            <video id="home1" autoplay muted loop playsinline> 
+                <source type="video/mp4" src="./static/videos/get_ar_tag/605.mp4" /> 
+            </video>
+            <video id="home2" autoplay muted loop playsinline> 
+                <source type="video/mp4" src="./static/videos/et_ar_tag/605.mp4" /> 
+            </video>
+            <div class="clear"></div> 
+            <div>
+              <p class="subtitle has-text-centered left" style="margin-top: 5px"><span class="good caption_pad">GET-Zero (Ours) - 19 degrees/second</span></p>
+              <p class="subtitle has-text-centered right" style="margin-top: 5px"><span class="bad caption_pad">Baseline - 9 degrees/second</span></p>
+            </div>
+            <div class="clear"></div>
+
+            <h4 class="has-text-centered" style="margin-top: 20px;">Many design variations</h4>
+
+            <p style="margin-top: 0px;">In simulation, we explore even more hand designs <b>not seen during training</b> with joints removed and with link length extensions (orange) and observe GET-Zero can control a broad range of designs.</p>
+
+            <video autoplay muted loop playsinline style="margin-top: 5px; border-radius: 10px;"> 
+              <source type="video/mp4" src="./static/videos/zero_shot_grid.mp4" /> 
+            </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section no_top_pad">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="margin-top: 40px;">Failure Cases</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            The sim-to-real zero-shot control of a previously unseen hand design is challenging for contact-rich tasks, especially with both graph and link length variations present. We observe a few failure cases with GET-Zero when testing on <b>embodiments not seen during training</b>. [Left] This hand with missing index finger and link length extensions has a gap where the cube can fall through. [Right] This hand difficulty rotating the cube due to a pinky finger that only has a single joint, making it difficult to start the rotation cycle.
+          </p>
+          
+
+          <div id="wrapper"> 
+            <video id="home1" autoplay muted loop playsinline> 
+              <source type="video/mp4" src="./static/videos/get_ar_tag/584.mp4" /> 
+            </video>
+            <video id="home2" autoplay muted loop playsinline> 
+                <source type="video/mp4" src="./static/videos/get_ar_tag/585.mp4" /> 
+            </video>
+            <div class="clear"></div>
+            <div>
+              <p class="subtitle has-text-centered left" style="margin-top: 5px">Cube is dropped</p>
+              <p class="subtitle has-text-centered right" style="margin-top: 5px">Cube fails to rotate</p>
+            </div>
+        </div>
+
+        <br>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section no_top_pad">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="container is-max-desktop content">
+          <h2 class="title is-3" style="margin-top: 20px; text-align: center;">Citation</h2>
+          <pre><code>@article{,
+  author    = {},
+  title     = {},
+  journal   = {},
+  year      = {},
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="section no_top_pad">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="container is-max-desktop content">
+          <h2 class="title is-3" style="margin-top: 30px; text-align: center;">Authors</h2>
+            <div style="display: flex; justify-content: center;">
+              <div style="margin: 0px;">
+                  <table>
+                    <tr>
+                      <td style="border: 0px; padding-right: 20px;"><a href="https://austinapatel.github.io"><img src="static/images/authors/austin.png" style="width: 150px; border-radius: 100%;"/></a></td>
+                      <td style="border: 0px; padding-left: 20px;"><a href="https://shurans.github.io/"><img src="static/images/authors/shuran.jpg" style="width: 150px; border-radius: 100%;"/></a></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center; padding-right: 20px; padding-top: 0px;">
+                        <a href="https://austinapatel.github.io" class="is-size-5">Austin Patel</a>
+                      </td>
+                      <td style="text-align: center; padding-left: 20px; padding-top: 0px;"><a href="https://shurans.github.io/" class="is-size-5">Shuran Song</a></td>
+                    </tr>
+                  </table>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section no_top_pad">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="container is-max-desktop content">
+          <h2 class="title is-3" style="margin-top: 30px; text-align: center;">Acknowledgment</h2>
+          <p>
+            We would like to thank Kenneth Shaw, Prof. Pathak's lab at CMU, and the Prof. Liu's Movement lab at Stanford for sharing the LEAP Hand hardware. We would also like to thank Huy Ha, Xiaomeng Xu, Mengda Xu and Haochen Shi for their helpful feedback and fruitful discussions.  
+This work was supported in part by Sloan Fellowship and NSF #2132519.  The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies, either expressed or implied, of the sponsors. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
