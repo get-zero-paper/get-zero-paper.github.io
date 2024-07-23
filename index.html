@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T68W02KHKC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-T68W02KHKC');
+  </script>
+
   <meta charset="utf-8">
   <meta name="description"
         content="GET-Zero is a embodiment-aware policy for controlling a range of similar robot designs">
@@ -25,16 +35,43 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T68W02KHKC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-T68W02KHKC');
-</script>
+  <link rel="apple-touch-icon" sizes="57x57"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="//www-media.stanford.edu/assets/favicon/apple-touch-icon-180x180.png" />
+
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-196x196.png"
+    sizes="196x196" />
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-192x192.png"
+    sizes="192x192" />
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-128.png" sizes="128x128" />
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-16x16.png" sizes="16x16" />
+
+  <link rel="mask-icon" href="//www-media.stanford.edu/assets/favicon/safari-pinned-tab.svg" color="#ffffff">
+  <meta name="application-name" content="Stanford University" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="//www-media.stanford.edu/assets/favicon/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="//www-media.stanford.edu/assets/favicon/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="//www-media.stanford.edu/assets/favicon/mstile-150x150.png" />
+  <meta name="msapplication-square310x310logo" content="//www-media.stanford.edu/assets/favicon/mstile-310x310.png" />
+</head>
 
 <body>
 
@@ -60,7 +97,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="static/content/paper.pdf"
+                <a href="https://arxiv.org/pdf/2407.15002"
                     class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -69,15 +106,15 @@
                 </a>
               </span>
               <!-- Abstract Link. -->
-              <!-- <span class="link-block">
-                <a href="TODO arXiv abstract"
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2407.15002"
                     class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span> -->
+              </span>
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/real-stanford/get_zero"
@@ -261,23 +298,26 @@
   </div>
 </section>
 
-<!-- <section class="section no_top_pad">
+<section class="section no_top_pad">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <div class="container is-max-desktop content">
           <h2 class="title is-3" style="margin-top: 20px; text-align: center;">Citation</h2>
-          <pre><code>@article{,
-  author    = {},
-  title     = {},
-  journal   = {},
-  year      = {},
+          <pre><code>@misc{patel2024getzero,
+      title={{GET-Zero}: Graph Embodiment Transformer for Zero-shot Embodiment Generalization}, 
+      author={Austin Patel and Shuran Song},
+      year={2024},
+      eprint={2407.15002},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2407.15002}, 
 }</code></pre>
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
 <section class="section no_top_pad">
   <div class="container is-max-desktop">
